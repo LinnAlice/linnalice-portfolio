@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+
+<html data-theme="dark" lang="sv">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Du som viking | Linn Alice Olsson</title>
+<link href="styles.css" rel="stylesheet"/>
+<script>
+    const savedTheme = localStorage.getItem("linnalice-theme");
+    document.documentElement.dataset.theme = savedTheme || "dark";
+  </script>
+</head>
+<body>
+<div aria-hidden="true" class="forest-backdrop"></div>
+<div aria-hidden="true" class="fireflies" id="fireflies"></div>
+<header class="site-header">
+<a aria-label="Linn Alice Olsson, startsida" class="brand brand-icon-only" href="index.html">
+<span aria-hidden="true" class="brand-mark brand-mark-refined">
+<span class="brand-monogram">
+<span class="brand-l">L</span><span class="brand-a">A</span>
+</span>
+<span class="brand-orbit"></span>
+<span class="brand-dot"></span>
+</span>
+</a>
+<button aria-expanded="false" aria-label="Öppna meny" class="mobile-menu-btn" type="button">
+<span></span><span></span>
+</button>
+<nav aria-label="Primary navigation" class="main-nav">
+<a data-i18n="navWork" href="index.html#work">Arbeten</a>
+<a data-i18n="navAbout" href="index.html#about">Om mig</a>
+<a data-i18n="navDocuments" href="index.html#documents">CV</a>
+<a data-i18n="navContact" href="index.html#contact">Kontakt</a>
+</nav>
+<div class="nav-actions">
+<button aria-label="Switch language" class="control-btn" id="languageToggle" type="button">
+<span aria-hidden="true" class="control-icon">A/Å</span>
+<span id="languageLabel">EN</span>
+</button>
+<button aria-label="Switch theme" class="control-btn icon-only" id="themeToggle" type="button">
+<span aria-hidden="true" class="theme-icon moon">☾</span>
+<span aria-hidden="true" class="theme-icon sun">☀</span>
+</button>
+</div>
+</header>
+<main class="case-main">
+<section class="case-hero section-shell">
+<a class="case-back" data-i18n="caseBack" href="index.html#work">← Tillbaka till projekt</a>
+<p class="eyebrow" data-case-en="INTERACTIVE MUSEUM EXPERIENCE" data-case-sv="INTERAKTIV MUSEIUPPLEVELSE">INTERAKTIV MUSEIUPPLEVELSE</p>
+<h1 class="case-title" data-case-en="You as a Viking" data-case-sv="Du som viking">Du som viking</h1>
+<p class="case-intro" data-case-en="A group concept for the Viking Museum where visitors enter a virtual room, explore myths and facts, and continue through a quiz, character creation and an interactive survival game." data-case-sv="Ett gruppkoncept för Vikingamuseet där besökaren kliver in i ett virtuellt rum, tar del av myter och fakta och fortsätter genom quiz, karaktärsskapande och ett interaktivt överlevnadsspel.">Ett gruppkoncept för Vikingamuseet där besökaren kliver in i ett virtuellt rum, tar del av myter och fakta och fortsätter genom quiz, karaktärsskapande och ett interaktivt överlevnadsspel.</p>
+<div class="case-facts">
+<div class="case-fact"><span data-i18n="caseRole">ROLL</span><strong data-case-en="Wireframes and UX" data-case-sv="Wireframes och UX">Wireframes och UX</strong></div>
+<div class="case-fact"><span data-i18n="caseType">TYP</span><strong data-case-en="Virtual museum experience" data-case-sv="Virtuell museiupplevelse">Virtuell museiupplevelse</strong></div>
+<div class="case-fact"><span data-i18n="caseTools">VERKTYG</span><strong data-case-en="Figma and Miro" data-case-sv="Figma och Miro">Figma och Miro</strong></div>
+<div class="case-fact"><span data-i18n="caseStatus">STATUS</span><strong data-case-en="Group concept" data-case-sv="Koncept i grupp">Koncept i grupp</strong></div>
+</div>
+</section>
+<section class="section-shell">
+<div class="case-visual viking-hero-image">
+<img alt="Konceptbild av det virtuella rummet i Du som viking" src="assets/viking-room-concept.png"/>
+</div>
+
+<div class="case-section">
+<h2 data-case-en="The concept" data-case-sv="Konceptet">Konceptet</h2>
+<div>
+<p data-case-en="The concept was developed as a group. Visitors begin in a virtual room with myths and facts, move on to “Who are you in Viking society?”, and then take their role and character into the survival game Survive." data-case-sv="Konceptet togs fram i grupp. Besökaren börjar i ett virtuellt rum med myter och fakta, går vidare till ”Vem är du i vikingasamhället?” och tar sedan med sin roll och karaktär in i överlevnadsspelet Överlev.">Konceptet togs fram i grupp. Besökaren börjar i ett virtuellt rum med myter och fakta, går vidare till ”Vem är du i vikingasamhället?” och tar sedan med sin roll och karaktär in i överlevnadsspelet Överlev.</p>
+</div>
+</div>
+<div class="case-section">
+<h2 data-case-en="The quiz" data-case-sv="Quizet">Quizet</h2>
+<div>
+<p data-case-en="I developed the quiz together with another group member. We worked with question flow, choices and results so the role would feel like a natural starting point for the rest of the experience." data-case-sv="Quizet tog jag fram tillsammans med en annan gruppmedlem. Vi arbetade med frågeflöde, val och resultat så att rollen skulle kännas som en naturlig start på resten av upplevelsen.">Quizet tog jag fram tillsammans med en annan gruppmedlem. Vi arbetade med frågeflöde, val och resultat så att rollen skulle kännas som en naturlig start på resten av upplevelsen.</p>
+</div>
+</div>
+<div class="case-section">
+<h2 data-case-en="The character flow" data-case-sv="Karaktärsdelen">Karaktärsdelen</h2>
+<div>
+<p data-case-en="I was responsible for the character flow myself. I designed the journey from image upload to result, including the choice between a cinematic and a more historically accurate interpretation. The role from the quiz then continues into the rest of the experience." data-case-sv="Karaktärsdelen ansvarade jag för själv. Jag tog fram flödet från bilduppladdning till resultat, inklusive valet mellan en filmdramatiserad och en mer historiskt korrekt tolkning. Rollen från quizet följer sedan med in i resten av upplevelsen.">Karaktärsdelen ansvarade jag för själv. Jag tog fram flödet från bilduppladdning till resultat, inklusive valet mellan en filmdramatiserad och en mer historiskt korrekt tolkning. Rollen från quizet följer sedan med in i resten av upplevelsen.</p>
+<div class="viking-wireframe-story">
+<article class="viking-wireframe-step">
+<div class="viking-step-marker">
+<span>01</span>
+</div>
+<div class="viking-step-content">
+<div class="viking-step-heading">
+<h3 data-case-en="Upload an image" data-case-sv="Ladda upp en bild">Ladda upp en bild</h3>
+<p data-case-en="The first view sets expectations and guides the visitor before the image upload." data-case-sv="Första vyn sätter förväntningarna och guidar besökaren inför bilduppladdningen.">Första vyn sätter förväntningarna och guidar besökaren inför bilduppladdningen.</p>
+</div>
+<figure class="viking-wireframe-large">
+<img alt="Wireframe för bilduppladdning i Du som viking" src="assets/viking-wireframe-1.png"/>
+</figure>
+</div>
+</article>
+<article class="viking-wireframe-step">
+<div class="viking-step-marker">
+<span>02</span>
+</div>
+<div class="viking-step-content">
+<div class="viking-step-heading">
+<h3 data-case-en="Compare the results" data-case-sv="Jämför resultaten">Jämför resultaten</h3>
+<p data-case-en="Here the visitor compares two interpretations and chooses which character to continue with." data-case-sv="Här jämför besökaren två tolkningar och väljer vilken karaktär som ska följa med vidare.">Här jämför besökaren två tolkningar och väljer vilken karaktär som ska följa med vidare.</p>
+</div>
+<figure class="viking-wireframe-large">
+<img alt="Wireframe för jämförelse av två vikingakaraktärer" src="assets/viking-wireframe-2.png"/>
+</figure>
+</div>
+</article>
+<article class="viking-wireframe-step">
+<div class="viking-step-marker">
+<span>03</span>
+</div>
+<div class="viking-step-content">
+<div class="viking-step-heading">
+<h3 data-case-en="Your finished character" data-case-sv="Din färdiga karaktär">Din färdiga karaktär</h3>
+<p data-case-en="The final view brings the role from the quiz and the selected character together in a result that can be shared or carried into the next part." data-case-sv="Den sista vyn samlar rollen från quizet och den valda karaktären i ett resultat som går att dela eller ta vidare till nästa del.">Den sista vyn samlar rollen från quizet och den valda karaktären i ett resultat som går att dela eller ta vidare till nästa del.</p>
+</div>
+<figure class="viking-wireframe-large">
+<img alt="Wireframe för det färdiga karaktärsresultatet" src="assets/viking-wireframe-3.png"/>
+</figure>
+</div>
+</article>
+</div>
+<p class="case-supporting-text" data-case-en="The wireframes show how I worked with guidance, comparison and the transition from uploaded image to a finished character." data-case-sv="Wireframesen visar hur jag arbetade med guidning, jämförelse och övergången från uppladdad bild till en färdig karaktär.">Wireframesen visar hur jag arbetade med guidning, jämförelse och övergången från uppladdad bild till en färdig karaktär.</p>
+</div>
+</div>
+<div class="case-section">
+<h2 data-case-en="The whole experience and learnings" data-case-sv="Helheten och lärdomar">Helheten och lärdomar</h2>
+<div>
+<p data-case-en="My main takeaway was how much an experience benefits when each step prepares the visitor for the next one. I used Figma for wireframes and flows, and Miro for structure and shared decisions. The survival game was developed by the group as the next step after the character flow." data-case-sv="Det jag framför allt tog med mig var hur mycket en upplevelse tjänar på att nästa steg redan känns förberett i det förra. Jag använde Figma för wireframes och flöden och Miro för struktur och gemensamma beslut. Överlevnadsspelet utvecklades av gruppen som nästa steg efter karaktärsdelen.">Det jag framför allt tog med mig var hur mycket en upplevelse tjänar på att nästa steg redan känns förberett i det förra. Jag använde Figma för wireframes och flöden och Miro för struktur och gemensamma beslut. Överlevnadsspelet utvecklades av gruppen som nästa steg efter karaktärsdelen.</p>
+</div>
+</div>
+</section>
+</main>
+<footer class="site-footer section-shell">
+  <p class="footer-name">© <span id="year"></span> Linn Alice Olsson</p>
+  <button class="footer-top-button" type="button" data-i18n="footerTop" aria-label="Till toppen">
+   <span data-i18n="footerTop">Till toppen</span>
+   <span aria-hidden="true">↑</span>
+  </button>
+ </footer>
+<script src="script.js"></script>
+<script>
+    function updateCaseLanguage() {
+      const lang = localStorage.getItem("linnalice-lang") || "sv";
+      document.querySelectorAll("[data-case-sv]").forEach((el) => {
+        el.textContent = lang === "sv" ? el.dataset.caseSv : el.dataset.caseEn;
+      });
+    }
+    updateCaseLanguage();
+    document.getElementById("languageToggle")?.addEventListener("click", () => setTimeout(updateCaseLanguage, 0));
+  </script>
+</body>
+</html>

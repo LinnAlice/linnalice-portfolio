@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+
+<html data-theme="dark" lang="sv">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Matapp | Linn Alice Olsson</title>
+<link href="styles.css" rel="stylesheet"/>
+<script>
+    const savedTheme = localStorage.getItem("linnalice-theme");
+    document.documentElement.dataset.theme = savedTheme || "dark";
+  </script>
+</head>
+<body>
+<div aria-hidden="true" class="forest-backdrop"></div>
+<div aria-hidden="true" class="fireflies" id="fireflies"></div>
+<header class="site-header">
+<a aria-label="Linn Alice Olsson, startsida" class="brand brand-icon-only" href="index.html">
+<span aria-hidden="true" class="brand-mark brand-mark-refined">
+<span class="brand-monogram">
+<span class="brand-l">L</span><span class="brand-a">A</span>
+</span>
+<span class="brand-orbit"></span>
+<span class="brand-dot"></span>
+</span>
+</a>
+<button aria-expanded="false" aria-label="Öppna meny" class="mobile-menu-btn" type="button">
+<span></span><span></span>
+</button>
+<nav aria-label="Primary navigation" class="main-nav">
+<a data-i18n="navWork" href="index.html#work">Arbeten</a>
+<a data-i18n="navAbout" href="index.html#about">Om mig</a>
+<a data-i18n="navDocuments" href="index.html#documents">CV</a>
+<a data-i18n="navContact" href="index.html#contact">Kontakt</a>
+</nav>
+<div class="nav-actions">
+<button aria-label="Switch language" class="control-btn" id="languageToggle" type="button">
+<span aria-hidden="true" class="control-icon">A/Å</span>
+<span id="languageLabel">EN</span>
+</button>
+<button aria-label="Switch theme" class="control-btn icon-only" id="themeToggle" type="button">
+<span aria-hidden="true" class="theme-icon moon">☾</span>
+<span aria-hidden="true" class="theme-icon sun">☀</span>
+</button>
+</div>
+</header>
+<main class="case-main">
+<section class="case-hero section-shell">
+<a class="case-back" data-i18n="caseBack" href="index.html#work">← Tillbaka till projekt</a>
+<p class="eyebrow" data-case-en="RESPONSIVE UI • FIGMA" data-case-sv="RESPONSIV UI • FIGMA">RESPONSIV UI • FIGMA</p>
+<h1 class="case-title" data-case-en="Food app" data-case-sv="Matapp">Matapp</h1>
+<p class="case-intro" data-case-en="A course project where I designed a responsive food app concept for mobile and iPad. The focus was information hierarchy, reusable components and making the same design system work across two screen sizes." data-case-sv="Ett kursprojekt där jag designade ett responsivt matappkoncept för mobil och iPad. Fokus låg på informationshierarki, återanvändbara komponenter och att få samma designsystem att fungera på två skärmstorlekar.">Ett kursprojekt där jag designade ett responsivt matappkoncept för mobil och iPad. Fokus låg på informationshierarki, återanvändbara komponenter och att få samma designsystem att fungera på två skärmstorlekar.</p>
+<div class="case-facts">
+<div class="case-fact"><span data-i18n="caseRole">ROLL</span><strong data-case-en="UX and UI design" data-case-sv="UX och UI design">UX och UI design</strong></div>
+<div class="case-fact"><span data-i18n="caseType">TYP</span><strong data-case-en="Mobile and iPad" data-case-sv="Mobil och iPad">Mobil och iPad</strong></div>
+<div class="case-fact"><span data-i18n="caseTools">VERKTYG</span><strong data-case-en="Figma and prototyping" data-case-sv="Figma och prototyping">Figma och prototyping</strong></div>
+<div class="case-fact"><span data-i18n="caseStatus">STATUS</span><strong data-case-en="Iterative course project" data-case-sv="Iterativt kursprojekt">Iterativt kursprojekt</strong></div>
+</div>
+</section>
+<section class="section-shell">
+<div class="case-visual matapp-hero-image">
+<picture>
+<source media="(max-width: 680px)" srcset="assets/matapp-final-combined-hero-mobile.png"/>
+<img alt="Kombinerad visualisering av matappens slutresultat i mobil och iPad" src="assets/matapp-final-combined-hero.png"/>
+</picture>
+</div>
+</section>
+<section class="section-shell matapp-prototype-section">
+<div class="matapp-prototype-card">
+<div class="matapp-prototype-copy">
+<p class="eyebrow" data-case-en="INTERACTIVE PROTOTYPE" data-case-sv="INTERAKTIV PROTOTYP">INTERAKTIV PROTOTYP</p>
+<h2 data-case-en="Try the food app" data-case-sv="Testa matappen">Testa matappen</h2>
+<p data-case-en="The clickable mobile prototype is available in Figma and shows how the key screens connect." data-case-sv="Den klickbara mobilprototypen finns i Figma och visar hur de viktigaste vyerna hänger ihop.">Den klickbara mobilprototypen finns i Figma och visar hur de viktigaste vyerna hänger ihop.</p>
+</div>
+<a class="matapp-prototype-button" href="https://www.figma.com/proto/C2Lxq1f9OH0T0TTfnPXdbv/UI-kurs---Linn-Olsson--Copy-?node-id=6-16&amp;p=f&amp;t=yKw68wwn02vypSz4-1&amp;scaling=scale-down&amp;content-scaling=fixed&amp;page-id=0%3A1&amp;starting-point-node-id=6%3A16" rel="noopener noreferrer" target="_blank">
+<span data-case-en="Open prototype in Figma" data-case-sv="Öppna prototypen i Figma">Öppna prototypen i Figma</span>
+<span aria-hidden="true">↗</span>
+</a>
+</div>
+</section>
+<section class="section-shell">
+<div class="case-section">
+<h2 data-case-en="The goal" data-case-sv="Målet">Målet</h2>
+<div>
+<p data-case-en="I wanted the home screen to work both for someone who knows what they are looking for and for someone who needs inspiration. That is why complete meals, individual products and categories are combined in the same view." data-case-sv="Jag ville att startsidan skulle fungera både för den som vet vad den söker och den som behöver inspiration. Därför kombineras kompletta maträtter, enskilda produkter och kategorier i samma vy.">Jag ville att startsidan skulle fungera både för den som vet vad den söker och den som behöver inspiration. Därför kombineras kompletta maträtter, enskilda produkter och kategorier i samma vy.</p>
+<p data-case-en="The challenge was making a lot of content feel easy to scan. I worked with heading levels, grouping, spacing and recurring patterns to create a clear reading order." data-case-sv="Utmaningen var att få mycket innehåll att kännas överblickbart. Jag arbetade med rubriknivåer, grupperingar, luft och återkommande mönster för att skapa en tydlig läsordning.">Utmaningen var att få mycket innehåll att kännas överblickbart. Jag arbetade med rubriknivåer, grupperingar, luft och återkommande mönster för att skapa en tydlig läsordning.</p>
+</div>
+</div>
+<div class="case-section">
+<h2 data-case-en="From exploration to direction" data-case-sv="Från utforskning till riktning">Från utforskning till riktning</h2>
+<div>
+<p data-case-en="At the beginning I explored different layouts, colours and ways of prioritising content. Comparing versions side by side made it easier to separate improvements in clarity from purely stylistic choices." data-case-sv="I början testade jag olika layouter, färger och sätt att prioritera innehållet. Att lägga versioner bredvid varandra gjorde det lättare att skilja förbättrad tydlighet från rena stilval.">I början testade jag olika layouter, färger och sätt att prioritera innehållet. Att lägga versioner bredvid varandra gjorde det lättare att skilja förbättrad tydlighet från rena stilval.</p>
+<p data-case-en="I landed on a visual system with a dark blue base, orange accent and light surfaces. Colour is used mainly for function and priority rather than decoration." data-case-sv="Jag landade i ett visuellt system med mörkblå bas, orange accent och ljusa ytor. Färg används främst för funktion och prioritet, inte som dekoration.">Jag landade i ett visuellt system med mörkblå bas, orange accent och ljusa ytor. Färg används främst för funktion och prioritet, inte som dekoration.</p>
+<figure class="matapp-process-image matapp-process-wide">
+<img alt="Tidiga designutforskningar för matappen i Figma" src="assets/matapp-early-exploration.png"/>
+<figcaption data-case-en="Early versions where I compared layout, colour and visual hierarchy." data-case-sv="Tidiga versioner där jag jämförde layout, färg och visuell prioritering.">Tidiga versioner där jag jämförde layout, färg och visuell prioritering.</figcaption>
+</figure>
+</div>
+</div>
+<div class="case-section">
+<h2 data-case-en="Components and consistency" data-case-sv="Komponenter och konsekvens">Komponenter och konsekvens</h2>
+<div>
+<p data-case-en="In Figma I built recurring elements as components. This made it easier to keep product cards, buttons, navigation and categories consistent as the design changed." data-case-sv="I Figma byggde jag återkommande delar som komponenter. Det gjorde det enklare att hålla produktkort, knappar, navigation och kategorier konsekventa när designen förändrades.">I Figma byggde jag återkommande delar som komponenter. Det gjorde det enklare att hålla produktkort, knappar, navigation och kategorier konsekventa när designen förändrades.</p>
+<p data-case-en="The overview needs to make many types of content easy to scan, while the product page carries more detailed information. The same components and visual rules help both screens feel like the same product." data-case-sv="Översikten behöver göra många typer av innehåll skannbara, medan produktsidan behöver bära mer detaljinformation. Samma komponenter och visuella regler används för att få båda vyerna att kännas som samma produkt.">Översikten behöver göra många typer av innehåll skannbara, medan produktsidan behöver bära mer detaljinformation. Samma komponenter och visuella regler används för att få båda vyerna att kännas som samma produkt.</p>
+<div class="matapp-components-grid">
+<figure class="matapp-components-card">
+<img alt="Översiktsvy för matappen med produktkort och kategorier" src="assets/matapp-components-home.png"/>
+<figcaption data-case-en="The overview focuses on scannability, recognition and clearly grouped content." data-case-sv="Översiktsvyn fokuserar på skannbarhet, igenkänning och tydliga innehållsgrupper.">Översiktsvyn fokuserar på skannbarhet, igenkänning och tydliga innehållsgrupper.</figcaption>
+</figure>
+<figure class="matapp-components-card">
+<img alt="Produktsida för pasta carbonara i matappen" src="assets/matapp-components-product.png"/>
+<figcaption data-case-en="The product page uses the same component logic while prioritising price, contents, delivery and the purchase decision." data-case-sv="Produktsidan använder samma komponenttänk men prioriterar pris, innehåll, leverans och köpbeslut.">Produktsidan använder samma komponenttänk men prioriterar pris, innehåll, leverans och köpbeslut.</figcaption>
+</figure>
+</div>
+<p class="case-supporting-text" data-case-en="The two views show how the components keep the interface cohesive even as the content and user goals change." data-case-sv="De två vyerna visar hur komponenterna håller ihop gränssnittet även när innehåll och användarens mål förändras.">De två vyerna visar hur komponenterna håller ihop gränssnittet även när innehåll och användarens mål förändras.</p>
+</div>
+</div>
+<div class="case-section">
+<h2 data-case-en="Feedback and iteration" data-case-sv="Feedback och iteration">Feedback och iteration</h2>
+<div>
+<p data-case-en="I received ongoing feedback from classmates and teachers and used it to adjust spacing, clarity and the balance between content and recurring elements." data-case-sv="Jag fick löpande feedback från klasskamrater och lärare och använde den för att justera bland annat avstånd, tydlighet och balansen mellan innehåll och återkommande element.">Jag fick löpande feedback från klasskamrater och lärare och använde den för att justera bland annat avstånd, tydlighet och balansen mellan innehåll och återkommande element.</p>
+<p data-case-en="It became clear that a polished screen is not automatically a finished solution. Small changes after feedback made a meaningful difference to reading order and what feels interactive." data-case-sv="Det blev tydligt att en polerad skärm inte automatiskt är en färdig lösning. Små ändringar efter feedback gjorde stor skillnad för läsordning och vad som uppfattas som interaktivt.">Det blev tydligt att en polerad skärm inte automatiskt är en färdig lösning. Små ändringar efter feedback gjorde stor skillnad för läsordning och vad som uppfattas som interaktivt.</p>
+</div>
+</div>
+<div class="case-section">
+<h2 data-case-en="Responsive outcome" data-case-sv="Responsivt resultat">Responsivt resultat</h2>
+<div>
+<p data-case-en="The final result includes both mobile and iPad layouts. On the larger canvas I use more columns and wider sections rather than simply scaling up the mobile version, while keeping the components and hierarchy recognisable." data-case-sv="Slutresultatet finns som mobilvy och iPadvy. På den större ytan använder jag fler kolumner och bredare sektioner i stället för att bara skala upp mobilen, samtidigt som komponenter och hierarki känns igen.">Slutresultatet finns som mobilvy och iPadvy. På den större ytan använder jag fler kolumner och bredare sektioner i stället för att bara skala upp mobilen, samtidigt som komponenter och hierarki känns igen.</p>
+<p data-case-en="The project mainly gave me more practical experience with components in Figma, responsive UI design and iteration. The mobile prototype connects the screens into an actual flow." data-case-sv="Projektet gav mig framför allt mer praktisk erfarenhet av komponentbaserat arbete i Figma, responsiv UI design och iteration. Mobilprototypen knyter ihop skärmarna till ett faktiskt flöde.">Projektet gav mig framför allt mer praktisk erfarenhet av komponentbaserat arbete i Figma, responsiv UI design och iteration. Mobilprototypen knyter ihop skärmarna till ett faktiskt flöde.</p>
+</div>
+</div>
+</section>
+</main>
+<footer class="site-footer section-shell">
+  <p class="footer-name">© <span id="year"></span> Linn Alice Olsson</p>
+  <button class="footer-top-button" type="button" data-i18n="footerTop" aria-label="Till toppen">
+   <span data-i18n="footerTop">Till toppen</span>
+   <span aria-hidden="true">↑</span>
+  </button>
+ </footer>
+<script src="script.js"></script>
+<script>
+    function updateCaseLanguage() {
+      const lang = localStorage.getItem("linnalice-lang") || "sv";
+      document.querySelectorAll("[data-case-sv]").forEach((el) => {
+        el.textContent = lang === "sv" ? el.dataset.caseSv : el.dataset.caseEn;
+      });
+    }
+    updateCaseLanguage();
+    document.getElementById("languageToggle")?.addEventListener("click", () => setTimeout(updateCaseLanguage, 0));
+  </script>
+</body>
+</html>

@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="sv" data-theme="dark">
+<head>
+ <meta charset="utf-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1" />
+ <meta name="description" content="Portfolio för Linn Alice Olsson, UX Designer i Stockholm" />
+ <title>Linn Alice Olsson | UX Designer</title>
+ <link rel="stylesheet" href="styles.css" />
+ <script>
+  // Dark mode is the default. If the visitor has chosen before, remember it.
+  const savedTheme = localStorage.getItem("linnalice-theme");
+    document.documentElement.dataset.theme = savedTheme || "dark";
+ </script>
+</head>
+
+<body>
+ <div class="forest-backdrop" aria-hidden="true"></div>
+ <div class="fireflies" id="fireflies" aria-hidden="true"></div>
+
+ <header class="site-header">
+  <a class="brand brand-icon-only" href="index.html" aria-label="Linn Alice Olsson, startsida">
+      <span class="brand-mark brand-mark-refined" aria-hidden="true">
+        <span class="brand-monogram">
+          <span class="brand-l">L</span><span class="brand-a">A</span>
+        </span>
+        <span class="brand-orbit"></span>
+        <span class="brand-dot"></span>
+      </span>
+    </a>
+
+  <button class="mobile-menu-btn" type="button" aria-label="Öppna meny" aria-expanded="false">
+   <span></span><span></span>
+  </button>
+
+  <nav class="main-nav" aria-label="Primary navigation">
+   <a href="#work" data-i18n="navWork">Arbeten</a>
+   <a href="#about" data-i18n="navAbout">Om mig</a>
+   <a href="#documents" data-i18n="navDocuments">CV</a>
+   <a href="#contact" data-i18n="navContact">Kontakt</a>
+  </nav>
+
+  <div class="nav-actions">
+   <button class="control-btn" id="languageToggle" type="button" aria-label="Switch language">
+    <span class="control-icon" aria-hidden="true">A/Å</span>
+    <span id="languageLabel">EN</span>
+   </button>
+
+   <button class="control-btn icon-only" id="themeToggle" type="button" aria-label="Switch theme">
+    <span class="theme-icon moon" aria-hidden="true">☾</span>
+    <span class="theme-icon sun" aria-hidden="true">☀</span>
+   </button>
+  </div>
+ </header>
+
+ <main>
+  <section class="hero section-shell">
+   <div class="hero-topline">
+    <p class="eyebrow" data-i18n="heroEyebrow">UX DESIGNER • STOCKHOLM</p>
+    <p class="hero-meta" data-i18n="heroMeta">RESEARCH • PROTOTYPING • VISUELL DESIGN</p>
+   </div>
+
+   <h1 class="name-banner" aria-label="Linn Alice Olsson">
+    <span class="sr-only">Linn Alice Olsson</span>
+
+    <span class="name-word" aria-hidden="true">
+     <span class="name-letter" style="--i:0">L</span>
+     <span class="name-letter" style="--i:1">i</span>
+     <span class="name-letter" style="--i:2">n</span>
+     <span class="name-letter" style="--i:3">n</span>
+    </span>
+
+    <span class="name-word" aria-hidden="true">
+     <span class="name-letter" style="--i:4">A</span>
+     <span class="name-letter" style="--i:5">l</span>
+     <span class="name-letter" style="--i:6">i</span>
+     <span class="name-letter" style="--i:7">c</span>
+     <span class="name-letter" style="--i:8">e</span>
+    </span>
+
+    <span class="name-word" aria-hidden="true">
+     <span class="name-letter" style="--i:9">O</span>
+     <span class="name-letter" style="--i:10">l</span>
+     <span class="name-letter" style="--i:11">s</span>
+     <span class="name-letter" style="--i:12">s</span>
+     <span class="name-letter" style="--i:13">o</span>
+     <span class="name-letter" style="--i:14">n</span>
+    </span>
+
+    <span class="name-hover-particles" aria-hidden="true"></span>
+    <span class="name-wind-lines" aria-hidden="true">
+     <i></i><i></i><i></i><i></i><i></i><i></i>
+    </span>
+   </h1>
+
+   <div class="hero-divider" aria-hidden="true"></div>
+
+   <div class="hero-lower">
+    <div class="hero-copy">
+     <p class="hero-intro" data-i18n="heroIntro">Jag studerar UX design på Nackademin i Stockholm och gillar projekt där jag får förstå problemet ordentligt innan jag börjar forma lösningen.</p>
+     <p class="hero-detail" data-i18n="heroDetail">Jag rör mig gärna mellan intervjuer, användartester, struktur och visuella detaljer, från första insikt till prototyp.</p>
+    </div>
+
+    <div class="hero-actions">
+     <a class="btn btn-primary hero-project-btn" href="#work">
+      <span data-i18n="heroWork">Se mina projekt</span>
+      <span class="btn-arrow" aria-hidden="true">↓</span>
+     </a>
+     <a class="btn btn-secondary hero-contact-btn" href="#contact" data-i18n="heroContact">Kontakta mig</a>
+    </div>
+   </div>
+  </section>
+
+  <section class="work section-shell" id="work">
+   <div class="section-heading">
+    <div>
+     <p class="eyebrow" data-i18n="workEyebrow">ARBETEN</p>
+     <h2 data-i18n="workTitle">Mina projekt</h2>
+    </div>
+    <p class="section-description" data-i18n="workDescription">Här samlar jag ett pågående kundsamarbete och projekt från utbildningen. </p>
+   </div>
+
+   <div class="project-grid">
+    <a class="project-card project-featured" href="wingspan.html">
+     <div class="project-art art-wingspan project-art-image">
+            <img src="assets/wingspan-concept-home.png" alt="Koncept för Wingspans nya startsida" />
+            <span class="art-label">WINGSPAN</span>
+          </div>
+          <div class="project-meta">
+      <div>
+       <p class="project-kicker" data-i18n="project2Kicker">PÅGÅENDE KONCEPT • WEBBREDESIGN</p>
+       <h3 data-i18n="project2Title">Wingspan</h3>
+      </div>
+      <span class="project-arrow" aria-hidden="true">↗</span>
+     </div>
+     <p class="project-summary" data-i18n="project2Summary">Pågående redesign tillsammans med Wingspan, grundad i intervjuer, research och löpande dialog med företaget.</p>
+     <div class="project-tags">
+      <span data-i18n="tagWingspan1">Intervjuer</span><span data-i18n="tagWingspan2">Figma</span><span data-i18n="tagWingspan3">Webbdesign</span>
+     </div>
+    </a>
+
+    <a class="project-card" href="vikingamuseet.html">
+     <div class="project-art art-viking project-art-image">
+      <img src="assets/viking-room-concept.png" alt="Konceptbild för Du som viking" />
+      <span class="art-label">VIKINGAMUSEET</span>
+     </div>
+     <div class="project-meta">
+      <div>
+       <p class="project-kicker" data-i18n="project1Kicker">INTERAKTIV MUSEIUPPLEVELSE</p>
+       <h3 data-i18n="project1Title">Du som viking</h3>
+      </div>
+      <span class="project-arrow" aria-hidden="true">↗</span>
+     </div>
+     <p class="project-summary" data-i18n="project1Summary">Ett interaktivt museumskoncept där besökaren går från myter och fakta till quiz, karaktärsskapande och ett överlevnadsspel.</p>
+     <div class="project-tags">
+      <span data-i18n="tagViking1">Wireframes</span><span data-i18n="tagViking2">Figma</span><span data-i18n="tagViking3">Prototyp</span>
+     </div>
+    </a>
+
+    <a class="project-card" href="matapp.html">
+     <div class="project-art art-food matapp-card-art">
+      <div class="matapp-card-ipad">
+        <img src="assets/matapp-ipad-final.png" alt="Matappens färdiga iPadvy" />
+      </div>
+      <div class="matapp-card-phone">
+        <img src="assets/matapp-mobile-final.png" alt="Matappens färdiga mobilvy" />
+      </div>
+      <span class="art-label">MATAPP</span>
+     </div>
+     <div class="project-meta">
+      <div>
+       <p class="project-kicker" data-i18n="project4Kicker">RESPONSIV UI • FIGMA</p>
+       <h3 data-i18n="project4Title">Matapp</h3>
+      </div>
+      <span class="project-arrow" aria-hidden="true">↗</span>
+     </div>
+     <p class="project-summary" data-i18n="project4Summary">Ett responsivt UI koncept för mobil och iPad, med fokus på informationshierarki, komponenter och iteration efter feedback.</p>
+     <div class="project-tags"><span data-i18n="tagMatapp1">Figma</span><span data-i18n="tagMatapp2">Komponenter</span><span data-i18n="tagMatapp3">Responsiv UI</span></div>
+    </a>
+   </div>
+  </section>
+
+  <section class="about section-shell" id="about">
+   <div class="section-heading">
+    <div>
+     <p class="eyebrow" data-i18n="aboutEyebrow">OM MIG</p>
+     <h2 data-i18n="aboutTitle">Mitt perspektiv som UX designer</h2>
+    </div>
+   </div>
+
+   <div class="about-hybrid">
+    <div class="about-story-card">
+     <figure class="about-portrait">
+      <div class="portrait-frame">
+       <img class="portrait-image" src="assets/linn-portrait.jpg" alt="Porträtt av Linn Alice Olsson" />
+       <span class="portrait-tint" aria-hidden="true"></span>
+      </div>
+      <figcaption data-i18n="portraitCaption">Linn Alice Olsson • UX Designer</figcaption>
+     </figure>
+
+     <div class="about-copy about-copy-compact">
+      <p class="about-short" data-i18n="aboutShort">UX designstudent i Stockholm.</p>
+     </div>
+    </div>
+
+    <div class="competence-compact-card" aria-labelledby="competenceTitle">
+     <div class="competence-compact-intro">
+      <p class="eyebrow" data-i18n="competenceEyebrow">KOMPETENS & ARBETSSÄTT</p>
+      <h3 id="competenceTitle" data-i18n="competenceTitle">Det jag tar med mig in i UX</h3>
+      <p data-i18n="competenceIntro">Jag är legitimerad sjuksköterska i grunden och studerar idag UX design. Vården har lärt mig att lyssna, kommunicera tydligt och ta olika behov på allvar. Det perspektivet använder jag även i designarbetet.</p>
+     </div>
+
+     <div class="competence-compact-grid">
+      <article class="competence-compact-item">
+       <span class="competence-index" aria-hidden="true">01</span>
+       <h4 data-i18n="competenceResearchTitle">Research & användartester</h4>
+       <p data-i18n="competenceResearchBody">Jag har arbetat med intervjuer, användarundersökningar, observationer och användartester, och använder insikterna för att prioritera vad som faktiskt behöver förändras.</p>
+      </article>
+
+      <article class="competence-compact-item">
+       <span class="competence-index" aria-hidden="true">02</span>
+       <h4 data-i18n="competenceDesignTitle">Design & prototyper</h4>
+       <p data-i18n="competenceDesignBody">I Figma och Miro arbetar jag med flöden, wireframes, prototyper och UI. Jag lägger mycket vikt vid hierarki, konsekvens och att iterera efter feedback.</p>
+      </article>
+
+      <article class="competence-compact-item">
+       <span class="competence-index" aria-hidden="true">03</span>
+       <h4 data-i18n="competenceResponsibleTitle">Tillgänglighet & ansvar</h4>
+       <p data-i18n="competenceResponsibleBody">Jag har arbetat med WCAG och Design for All och har grundläggande kunskap om GDPR. AI använder jag som stöd för idéer, struktur och analys, med hänsyn till källkritik och personuppgifter.</p>
+      </article>
+
+      <article class="competence-compact-item">
+       <span class="competence-index" aria-hidden="true">04</span>
+       <h4 data-i18n="competenceTechTitle">Teknisk förståelse</h4>
+       <p data-i18n="competenceTechBody">HTML, CSS och grundläggande C# hjälper mig att förstå hur gränssnitt byggs och vad som händer när en design ska bli en fungerande lösning.</p>
+      </article>
+     </div>
+    </div>
+   </div>
+  </section>
+
+  <section class="personal-sequence section-shell" id="personal">
+   <div class="personal-sequence-inner">
+    <div class="personal-sequence-heading">
+     <div>
+      <p class="eyebrow" data-i18n="personalEyebrow">UTANFÖR UX</p>
+      <h2 data-i18n="personalTitle">Lite mer av personen bakom portfolion</h2>
+     </div>
+     <p data-i18n="personalIntro">En interaktiv illustration av mitt hemmakontor och några av sakerna jag gärna fastnar i utanför UX.</p>
+    </div>
+
+    <div class="personal-world-grid">
+     <figure class="personal-artwork personal-artwork-interactive">
+      <div class="personal-artwork-frame interactive-office-frame">
+       <img src="assets/home-office-illustration.jpg" alt="Illustration av Linns hemmakontor med skrivbord, skärm, bokhyllor, växter och levande ljus" loading="lazy" />
+
+       <button class="office-hotspot hotspot-read" type="button" data-fact="read" aria-label="Läsa"></button>
+       <button class="office-hotspot hotspot-draw" type="button" data-fact="draw" aria-label="Rita"></button>
+       <button class="office-hotspot hotspot-game" type="button" data-fact="game" aria-label="Spela"></button>
+       <button class="office-hotspot hotspot-code" type="button" data-fact="code" aria-label="Koda"></button>
+       <button class="office-hotspot hotspot-interior" type="button" data-fact="interior" aria-label="Inreda"></button>
+      </div>
+      <figcaption data-i18n="homeOfficeCaption">Illustrationen är ritad i Procreate av mig och föreställer mitt hemmakontor.</figcaption>
+     </figure>
+
+     <div class="personal-world-panel" aria-live="polite">
+      <div class="personal-world-topline">
+       <span class="personal-world-index" id="personalWorldIndex">01 / 05</span>
+       <p class="personal-world-instruction" data-i18n="personalInstruction">Hovra över bilden eller välj ett ämne.</p>
+      </div>
+
+      <div class="personal-world-content">
+       <p class="personal-world-word" id="personalWorldWord" data-i18n="personalDrawWord">Rita</p>
+       <p class="personal-world-copy" id="personalWorldCopy" data-i18n="personalDrawCopy">Jag har alltid tyckt om att rita och måla. Det är nog där mycket av mitt intresse för färg, form och de där detaljerna som ingen annan verkar bry sig om började.</p>
+      </div>
+
+      <div class="personal-world-topics" id="personalWorldTopics" aria-label="Personliga intressen">
+       <button class="personal-topic-btn is-active" type="button" data-fact="draw" data-i18n="personalDrawWord">Rita</button>
+       <button class="personal-topic-btn" type="button" data-fact="game" data-i18n="personalGameWord">Spela</button>
+       <button class="personal-topic-btn" type="button" data-fact="code" data-i18n="personalCodeWord">Koda</button>
+       <button class="personal-topic-btn" type="button" data-fact="read" data-i18n="personalReadWord">Läsa</button>
+       <button class="personal-topic-btn" type="button" data-fact="interior" data-i18n="personalInteriorWord">Inreda</button>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section>
+
+  <section class="documents section-shell" id="documents">
+   <div class="section-heading">
+    <div>
+     <p class="eyebrow" data-i18n="documentsEyebrow">MER OM MIG</p>
+     <h2 data-i18n="documentsTitle">CV</h2>
+    </div>
+    <p class="section-description" data-i18n="documentsDescription">Vill du se den mer ordnade versionen av min bakgrund finns mitt CV här.</p>
+   </div>
+
+   <div class="document-grid">
+    <a class="document-card" href="assets/Linn-Alice-CV.pdf" target="_blank" rel="noopener noreferrer">
+     <span class="document-index">01</span>
+     <div>
+      <p class="document-label">PDF</p>
+      <h3 data-i18n="cvTitle">Mitt CV</h3>
+      <p data-i18n="cvBody">Min utbildning, tidigare erfarenhet och det jag arbetar med inom UX.</p>
+     </div>
+     <span class="document-arrow">↗</span>
+    </a>
+   </div>
+  </section>
+
+  <section class="contact section-shell" id="contact">
+   <div class="contact-card">
+    <div>
+     <p class="eyebrow" data-i18n="contactEyebrow">SÄG HEJ</p>
+     <h2 data-i18n="contactTitle">Vill du prata UX, praktik eller en halv idé?</h2>
+     <p data-i18n="contactBody">Hör gärna av dig. Jag lovar att inte börja med en workshop direkt.</p>
+    </div>
+
+    <div class="contact-links">
+     <a href="mailto:linnolsson16@hotmail.com">
+      <span>Email</span>
+      <strong>linnolsson16@hotmail.com</strong>
+     </a>
+     <a href="https://se.linkedin.com/in/linn-olsson-0a3868138" target="_blank" rel="noopener noreferrer">
+      <span>LinkedIn</span>
+      <strong data-i18n="linkedinText">Besök min LinkedIn</strong>
+     </a>
+    </div>
+   </div>
+  </section>
+ </main>
+
+ <footer class="site-footer section-shell">
+  <p class="footer-name">© <span id="year"></span> Linn Alice Olsson</p>
+  <button class="footer-top-button" type="button" data-i18n="footerTop" aria-label="Till toppen">
+   <span data-i18n="footerTop">Till toppen</span>
+   <span aria-hidden="true">↑</span>
+  </button>
+ </footer>
+
+ <script src="script.js"></script>
+</body>
+</html>
