@@ -5,20 +5,21 @@
  <meta name="viewport" content="width=device-width, initial-scale=1" />
  <meta name="description" content="Portfolio för Linn Alice Olsson, UX Designer i Stockholm" />
  <title>Linn Alice Olsson | UX Designer</title>
- <link rel="stylesheet" href="styles.css" />
  <script>
-  // Dark mode is the default. If the visitor has chosen before, remember it.
-  const savedTheme = localStorage.getItem("linnalice-theme");
-    document.documentElement.dataset.theme = savedTheme || "dark";
+  (() => {
+    const storedTheme = localStorage.getItem("linnalice-theme");
+    document.documentElement.dataset.theme = storedTheme === "light" ? "light" : "dark";
+  })();
  </script>
+ <link rel="stylesheet" href="styles.css" />
 </head>
 
-<body>
+<body id="top">
  <div class="forest-backdrop" aria-hidden="true"></div>
  <div class="fireflies" id="fireflies" aria-hidden="true"></div>
 
  <header class="site-header">
-  <a class="brand brand-icon-only" href="index.html" aria-label="Linn Alice Olsson, startsida">
+  <a class="brand brand-icon-only" href="index.html#top" aria-label="Linn Alice Olsson, startsida">
       <span class="brand-mark brand-mark-refined" aria-hidden="true">
         <span class="brand-monogram">
           <span class="brand-l">L</span><span class="brand-a">A</span>

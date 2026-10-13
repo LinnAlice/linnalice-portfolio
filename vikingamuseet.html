@@ -5,17 +5,19 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>Du som viking | Linn Alice Olsson</title>
-<link href="styles.css" rel="stylesheet"/>
 <script>
-    const savedTheme = localStorage.getItem("linnalice-theme");
-    document.documentElement.dataset.theme = savedTheme || "dark";
-  </script>
+  (() => {
+    const storedTheme = localStorage.getItem("linnalice-theme");
+    document.documentElement.dataset.theme = storedTheme === "light" ? "light" : "dark";
+  })();
+ </script>
+ <link href="styles.css" rel="stylesheet"/>
 </head>
 <body>
 <div aria-hidden="true" class="forest-backdrop"></div>
 <div aria-hidden="true" class="fireflies" id="fireflies"></div>
 <header class="site-header">
-<a aria-label="Linn Alice Olsson, startsida" class="brand brand-icon-only" href="index.html">
+<a aria-label="Linn Alice Olsson, startsida" class="brand brand-icon-only" href="index.html#top">
 <span aria-hidden="true" class="brand-mark brand-mark-refined">
 <span class="brand-monogram">
 <span class="brand-l">L</span><span class="brand-a">A</span>

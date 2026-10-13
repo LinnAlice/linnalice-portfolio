@@ -233,15 +233,35 @@ if (languageToggle) {
  });
 }
 
+function normalizeTheme(value) {
+ return value === "light" ? "light" : "dark";
+}
+
+function applyTheme(theme, persist = true) {
+ const nextTheme = normalizeTheme(theme);
+ document.documentElement.dataset.theme = nextTheme;
+ if (persist) localStorage.setItem("linnalice-theme", nextTheme);
+ if (themeToggle) {
+  themeToggle.setAttribute(
+   "aria-label",
+   nextTheme === "dark" ? "Switch to light mode" : "Switch to dark mode"
+  );
+ }
+}
+
 if (themeToggle) {
  themeToggle.addEventListener("click", () => {
-  const current = document.documentElement.dataset.theme || "dark";
-  const next = current === "dark" ? "light" : "dark";
-  document.documentElement.dataset.theme = next;
-      localStorage.setItem("linnalice-theme", next);
-    themeToggle.setAttribute("aria-label", next === "dark" ? "Switch to light mode" : "Switch to dark mode");
+  const current = normalizeTheme(document.documentElement.dataset.theme);
+  applyTheme(current === "dark" ? "light" : "dark");
  });
 }
+
+// Browsers may restore a page from the back/forward cache. Reapply only the
+// persisted dark/light value so no intermediate or stale appearance can survive.
+window.addEventListener("pageshow", () => {
+ const storedTheme = localStorage.getItem("linnalice-theme");
+ applyTheme(storedTheme === "light" ? "light" : "dark", false);
+});
 
 function createFireflies() {
  const container = document.getElementById("fireflies");
@@ -463,31 +483,19 @@ if (year) year.textContent = new Date().getFullYear();
 })();
 
 
-// === STABLE BACKGROUND HEIGHT ===
-// Keeps the original background colours visually consistent when navigating
-// between the homepage and project pages or when the browser restores scroll.
-(function keepBackgroundStable() {
-  const applyBackgroundHeight = () => {
-    const pageHeight = Math.max(
-      document.documentElement.scrollHeight,
-      document.body ? document.body.scrollHeight : 0,
-      window.innerHeight
-    );
-    document.documentElement.style.setProperty(
-      "--stable-background-height",
-      `${pageHeight}px`
-    );
-  };
-
-  applyBackgroundHeight();
-  requestAnimationFrame(applyBackgroundHeight);
-  window.addEventListener("load", applyBackgroundHeight, { once: true });
-  window.addEventListener("pageshow", () => {
-    const savedTheme = localStorage.getItem("linnalice-theme");
-    if (savedTheme === "dark" || savedTheme === "light") {
-      document.documentElement.dataset.theme = savedTheme;
-    }
-    applyBackgroundHeight();
+// === STABLE HOME LOGO NAVIGATION ===
+// Keeps only the active dark/light value and always lands the logo navigation
+// at the top of the homepage. No palette values are changed here.
+(function stableHomeLogoNavigation() {
+  document.querySelectorAll("a.brand[href*='index.html']").forEach((link) => {
+    link.addEventListener("click", () => {
+      const activeTheme =
+        document.documentElement.dataset.theme === "light" ? "light" : "dark";
+      localStorage.setItem("linnalice-theme", activeTheme);
+    });
   });
-  window.addEventListener("resize", applyBackgroundHeight);
+
+  if (location.hash === "#top") {
+    requestAnimationFrame(() => window.scrollTo(0, 0));
+  }
 })();
