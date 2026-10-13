@@ -5814,3 +5814,450 @@ a:focus-visible, button:focus-visible { outline:2px solid var(--accent); outline
     transition: none;
   }
 }
+
+
+/* === REQUESTED REFINEMENTS ONLY ===
+   Built on the clean palette. No alternate section backgrounds are introduced
+   except for the contact card. */
+
+/* Less empty space below the floating navbar, while keeping the original hero typography. */
+.hero {
+  min-height: auto;
+  padding-top: clamp(50px, 6vh, 76px);
+  padding-bottom: clamp(48px, 6vh, 72px);
+}
+
+.case-hero {
+  min-height: auto;
+  align-content: start;
+  padding-top: clamp(50px, 6vh, 76px);
+  padding-bottom: clamp(52px, 6vh, 74px);
+}
+
+@media (max-width: 680px) {
+  .hero {
+    padding-top: 42px;
+    padding-bottom: 46px;
+  }
+
+  .case-hero {
+    padding-top: 44px;
+    padding-bottom: 48px;
+  }
+}
+
+/* Simple responsive downward arrow between the landing area and projects. */
+.hero-scroll-cue {
+  --scroll-arrow-color: #d6a95f;
+  position: relative;
+  z-index: 2;
+  display: block;
+  width: 30px;
+  height: clamp(64px, 11vh, 142px);
+  margin: 0 auto clamp(12px, 2vh, 26px);
+  color: var(--scroll-arrow-color);
+}
+
+.hero-scroll-cue::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 1.5px;
+  height: calc(100% - 12px);
+  border-radius: 999px;
+  background: linear-gradient(
+    to bottom,
+    rgba(214,169,95,.12),
+    rgba(214,169,95,.96)
+  );
+  box-shadow:
+    0 0 9px rgba(214,169,95,.26),
+    0 0 20px rgba(214,169,95,.12);
+  transform: translateX(-50%);
+  transform-origin: top;
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.hero-scroll-cue::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 2px;
+  width: 10px;
+  height: 10px;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  filter: drop-shadow(0 0 5px rgba(214,169,95,.32));
+  transform: translateX(-50%) rotate(45deg);
+  transition: transform 180ms ease, filter 180ms ease;
+}
+
+.hero-scroll-cue:hover::before,
+.hero-scroll-cue:focus-visible::before {
+  transform: translateX(-50%) scaleY(1.04);
+  box-shadow:
+    0 0 12px rgba(214,169,95,.38),
+    0 0 26px rgba(214,169,95,.18);
+}
+
+.hero-scroll-cue:hover::after,
+.hero-scroll-cue:focus-visible::after {
+  transform: translateX(-50%) translateY(3px) rotate(45deg);
+  filter: drop-shadow(0 0 8px rgba(214,169,95,.48));
+}
+
+.hero-scroll-cue:focus-visible {
+  outline: 1px solid rgba(214,169,95,.42);
+  outline-offset: 7px;
+  border-radius: 999px;
+}
+
+html[data-theme="light"] .hero-scroll-cue {
+  --scroll-arrow-color: #58705c;
+}
+
+html[data-theme="light"] .hero-scroll-cue::before {
+  background: linear-gradient(
+    to bottom,
+    rgba(88,112,92,.12),
+    rgba(88,112,92,.92)
+  );
+  box-shadow:
+    0 0 8px rgba(88,112,92,.18),
+    0 0 18px rgba(88,112,92,.09);
+}
+
+html[data-theme="light"] .hero-scroll-cue::after {
+  filter: drop-shadow(0 0 5px rgba(88,112,92,.20));
+}
+
+@media (max-width: 680px) {
+  .hero-scroll-cue {
+    height: clamp(54px, 8vh, 86px);
+    margin-bottom: 8px;
+  }
+}
+
+/* Stronger project card interactions, with the original static card colours preserved. */
+.project-card {
+  will-change: transform;
+  transition:
+    transform 300ms cubic-bezier(.2,.8,.2,1),
+    border-color 260ms ease,
+    background 260ms ease,
+    box-shadow 300ms ease;
+}
+
+.project-card .project-art {
+  transition: transform 320ms cubic-bezier(.2,.8,.2,1), box-shadow 320ms ease;
+}
+
+.project-card .project-art-image > img,
+.project-card .matapp-card-ipad,
+.project-card .matapp-card-phone {
+  transition: transform 440ms cubic-bezier(.2,.8,.2,1), filter 320ms ease;
+}
+
+.project-card:hover,
+.project-card:focus-visible {
+  transform: translateY(-10px) scale(1.006);
+  border-color: rgba(226,181,99,.52);
+  background: rgba(22,35,27,.88);
+  box-shadow:
+    0 28px 70px rgba(0,0,0,.34),
+    0 0 0 1px rgba(226,181,99,.07) inset,
+    0 0 34px rgba(226,181,99,.075);
+}
+
+.project-card:hover .project-art,
+.project-card:focus-visible .project-art {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 38px rgba(0,0,0,.20);
+}
+
+.project-card:hover .project-art-image > img,
+.project-card:focus-visible .project-art-image > img {
+  transform: scale(1.035);
+  filter: saturate(1.05) contrast(1.02);
+}
+
+.project-card:hover .matapp-card-ipad,
+.project-card:focus-visible .matapp-card-ipad {
+  transform: translateY(-5px) rotate(-.35deg) scale(1.012);
+}
+
+.project-card:hover .matapp-card-phone,
+.project-card:focus-visible .matapp-card-phone {
+  transform: translateY(-8px) rotate(.6deg) scale(1.022);
+}
+
+.project-card:hover .project-arrow,
+.project-card:focus-visible .project-arrow {
+  transform: translate(3px,-3px) scale(1.07);
+  color: #161b13;
+  border-color: #e2b563;
+  background: #e2b563;
+  box-shadow: 0 0 20px rgba(226,181,99,.18);
+}
+
+.project-card:hover .art-label,
+.project-card:focus-visible .art-label {
+  border-color: rgba(255,255,255,.30);
+  background: rgba(8,13,10,.48);
+  color: rgba(255,255,255,.96);
+}
+
+html[data-theme="light"] .project-card:hover,
+html[data-theme="light"] .project-card:focus-visible {
+  border-color: rgba(65,94,71,.34);
+  background: rgba(249,250,245,.94);
+  box-shadow:
+    0 24px 56px rgba(55,77,59,.15),
+    0 0 0 1px rgba(75,101,79,.05) inset,
+    0 0 30px rgba(75,101,79,.055);
+}
+
+html[data-theme="light"] .project-card:hover .project-arrow,
+html[data-theme="light"] .project-card:focus-visible .project-arrow {
+  color: #f5f6f0;
+  border-color: #35573d;
+  background: #35573d;
+  box-shadow: 0 7px 18px rgba(53,87,61,.15);
+}
+
+/* Larger supporting copy and captions. */
+.section-description {
+  font-size: 17px;
+  line-height: 1.66;
+}
+
+.project-summary {
+  font-size: 16.5px;
+  line-height: 1.66;
+}
+
+.project-kicker,
+.project-tags {
+  font-size: 12px;
+}
+
+.hero-detail {
+  font-size: 17px;
+}
+
+.about-copy-compact .about-short {
+  font-size: 16px;
+}
+
+.competence-compact-intro > p:not(.eyebrow) {
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.competence-compact-item p {
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.personal-sequence-heading > p,
+.personal-world-instruction {
+  font-size: 16px;
+}
+
+.contact-card p:not(.eyebrow) {
+  font-size: 17px;
+  line-height: 1.68;
+}
+
+.documents .document-card p:not(.document-label) {
+  font-size: 16px;
+  line-height: 1.62;
+}
+
+.about-portrait figcaption,
+.personal-artwork figcaption,
+.personal-artwork-interactive figcaption,
+.case-inline-figure figcaption,
+.matapp-process-image figcaption,
+.matapp-components-card figcaption {
+  font-size: 13.5px;
+  line-height: 1.62;
+}
+
+/* Larger sequence numbers. */
+.competence-index,
+.competence-compact-item .competence-index,
+.personal-world-index {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .09em;
+}
+
+.viking-step-marker span {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* CV card without the 01, but with the original card surface. */
+.documents .document-card {
+  grid-template-columns: minmax(0, 1fr) 54px;
+  gap: 28px;
+}
+
+@media (max-width: 680px) {
+  .section-description,
+  .project-summary,
+  .hero-detail,
+  .contact-card p:not(.eyebrow) {
+    font-size: 16px;
+  }
+
+  .competence-compact-item p,
+  .about-portrait figcaption,
+  .personal-artwork figcaption,
+  .personal-artwork-interactive figcaption,
+  .case-inline-figure figcaption,
+  .matapp-process-image figcaption,
+  .matapp-components-card figcaption {
+    font-size: 13px;
+  }
+
+  .documents .document-card {
+    grid-template-columns: 1fr auto;
+  }
+}
+
+/* The contact card is the only section given its own alternate colour. */
+.contact-card {
+  border-color: rgba(160,183,151,.22);
+  background:
+    radial-gradient(circle at 84% 12%, rgba(226,181,99,.11), transparent 25%),
+    linear-gradient(135deg, rgba(35,57,42,.94), rgba(24,41,31,.92));
+  box-shadow:
+    0 28px 68px rgba(0,0,0,.25),
+    0 0 0 1px rgba(255,255,255,.025) inset;
+}
+
+.contact-card .eyebrow {
+  color: #e8bd72;
+}
+
+.contact-links a {
+  position: relative;
+  margin: 0 -12px;
+  padding: 18px 12px;
+  border-radius: 14px;
+  transition:
+    transform 200ms cubic-bezier(.2,.8,.2,1),
+    color 180ms ease,
+    background 180ms ease,
+    border-color 180ms ease;
+}
+
+.contact-links a::after {
+  content: "↗";
+  position: absolute;
+  right: 13px;
+  top: 50%;
+  color: var(--accent);
+  opacity: 0;
+  transform: translate(-5px,-50%);
+  transition: opacity 180ms ease, transform 200ms cubic-bezier(.2,.8,.2,1);
+}
+
+.contact-links a strong {
+  padding-right: 24px;
+  transition: color 180ms ease, transform 200ms ease;
+}
+
+.contact-links a:hover,
+.contact-links a:focus-visible {
+  transform: translateX(5px);
+  background: rgba(255,255,255,.055);
+  border-color: rgba(232,189,114,.30);
+}
+
+.contact-links a:hover strong,
+.contact-links a:focus-visible strong {
+  color: #f0c77e;
+  transform: translateX(-3px);
+}
+
+.contact-links a:hover::after,
+.contact-links a:focus-visible::after {
+  opacity: 1;
+  transform: translate(0,-50%);
+}
+
+html[data-theme="light"] .contact-card {
+  border-color: rgba(68,97,73,.16);
+  background:
+    radial-gradient(circle at 84% 12%, rgba(173,127,68,.09), transparent 27%),
+    linear-gradient(135deg, rgba(220,228,213,.96), rgba(232,236,224,.96));
+  box-shadow:
+    0 24px 50px rgba(62,79,64,.11),
+    0 0 0 1px rgba(255,255,255,.42) inset;
+}
+
+html[data-theme="light"] .contact-card .eyebrow {
+  color: #76501f;
+}
+
+html[data-theme="light"] .contact-links a:hover,
+html[data-theme="light"] .contact-links a:focus-visible {
+  background: rgba(255,255,255,.38);
+  border-color: rgba(68,97,73,.22);
+}
+
+html[data-theme="light"] .contact-links a:hover strong,
+html[data-theme="light"] .contact-links a:focus-visible strong,
+html[data-theme="light"] .contact-links a::after {
+  color: #426049;
+}
+
+/* Final hotspot placement: Inreda on the candles on the upper shelf. */
+.hotspot-interior {
+  left: 72.5%;
+  top: 15%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-scroll-cue::before,
+  .hero-scroll-cue::after,
+  .project-card,
+  .project-card .project-art,
+  .project-card .project-art-image > img,
+  .project-card .matapp-card-ipad,
+  .project-card .matapp-card-phone,
+  .contact-links a,
+  .contact-links a strong,
+  .contact-links a::after {
+    transition: none;
+  }
+}
+
+
+/* === STABLE ORIGINAL BACKGROUND ===
+   Uses the existing dark/light palette unchanged. The background is fixed to the
+   viewport while retaining the same gradient scale as the original page. */
+body {
+  background: var(--bg);
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 20% 0%, rgba(104, 131, 96, 0.15), transparent 36%),
+    linear-gradient(180deg, var(--bg) 0%, var(--bg-soft) 50%, var(--bg) 100%);
+  background-position: left top, left top;
+  background-repeat: no-repeat, no-repeat;
+  background-size:
+    100% var(--stable-background-height, 6000px),
+    100% var(--stable-background-height, 6000px);
+  transition: background 500ms ease;
+}

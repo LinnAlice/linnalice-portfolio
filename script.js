@@ -10,6 +10,7 @@ const translations = {
   heroDetail: "Jag rör mig gärna mellan intervjuer, användartester, struktur och visuella detaljer, från första insikt till prototyp.",
   heroWork: "Se mina projekt",
   heroContact: "Kontakta mig",
+  scrollWork: "Till mina projekt",
   workEyebrow: "ARBETEN",
   workTitle: "Mina projekt",
   workDescription: "Här samlar jag ett pågående kundsamarbete och projekt från utbildningen.",
@@ -110,6 +111,7 @@ const translations = {
   heroDetail: "I like moving between interviews, usability testing, structure and visual details, from the first insight to a prototype.",
   heroWork: "View my projects",
   heroContact: "Contact me",
+  scrollWork: "To my projects",
   workEyebrow: "WORK",
   workTitle: "My projects",
   workDescription: "A mix of an ongoing client collaboration and projects from my studies.",
@@ -458,4 +460,34 @@ if (year) year.textContent = new Date().getFullYear();
    });
   });
  });
+})();
+
+
+// === STABLE BACKGROUND HEIGHT ===
+// Keeps the original background colours visually consistent when navigating
+// between the homepage and project pages or when the browser restores scroll.
+(function keepBackgroundStable() {
+  const applyBackgroundHeight = () => {
+    const pageHeight = Math.max(
+      document.documentElement.scrollHeight,
+      document.body ? document.body.scrollHeight : 0,
+      window.innerHeight
+    );
+    document.documentElement.style.setProperty(
+      "--stable-background-height",
+      `${pageHeight}px`
+    );
+  };
+
+  applyBackgroundHeight();
+  requestAnimationFrame(applyBackgroundHeight);
+  window.addEventListener("load", applyBackgroundHeight, { once: true });
+  window.addEventListener("pageshow", () => {
+    const savedTheme = localStorage.getItem("linnalice-theme");
+    if (savedTheme === "dark" || savedTheme === "light") {
+      document.documentElement.dataset.theme = savedTheme;
+    }
+    applyBackgroundHeight();
+  });
+  window.addEventListener("resize", applyBackgroundHeight);
 })();
