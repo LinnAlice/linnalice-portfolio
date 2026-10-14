@@ -6336,3 +6336,124 @@ html[data-theme="light"] .contact-links a::after {
     gap: 0 .10em !important;
   }
 }
+
+
+/* === SINGLE CV CARD WITH LANGUAGE OPTIONS === */
+.document-card-cv {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(220px, 320px);
+  align-items: center;
+  gap: 28px;
+}
+
+.document-card-main {
+  min-width: 0;
+}
+
+.document-card-actions {
+  display: grid;
+  border-left: 1px solid var(--surface-border);
+}
+
+.document-card-action {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 16px 4px 16px 22px;
+  color: var(--text);
+  text-decoration: none;
+  border-bottom: 1px solid var(--surface-border);
+  transition:
+    transform 180ms ease,
+    color 180ms ease,
+    background 180ms ease;
+}
+
+.document-card-action:last-child {
+  border-bottom: 0;
+}
+
+.document-card-action span:first-child {
+  font-weight: 700;
+}
+
+.document-card-action span:last-child {
+  color: var(--accent);
+  transition: transform 180ms ease;
+}
+
+.document-card-action:hover,
+.document-card-action:focus-visible {
+  color: var(--accent);
+  transform: translateX(4px);
+}
+
+.document-card-action:hover span:last-child,
+.document-card-action:focus-visible span:last-child {
+  transform: translate(2px, -2px);
+}
+
+.document-card-action:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
+@media (max-width: 760px) {
+  .document-card-cv {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .document-card-actions {
+    border-left: 0;
+    border-top: 1px solid var(--surface-border);
+    padding-top: 4px;
+  }
+
+  .document-card-action {
+    padding: 15px 0;
+  }
+}
+
+
+/* === CV CARD ALIGNMENT FIX === */
+.documents .document-card-cv {
+  width: 100%;
+  box-sizing: border-box;
+  grid-template-columns: minmax(0, 1fr) minmax(240px, 300px);
+  align-items: center;
+  gap: clamp(26px, 4vw, 56px);
+}
+
+.documents .document-card-cv .document-card-actions {
+  width: 100%;
+  min-width: 0;
+  justify-self: stretch;
+  box-sizing: border-box;
+  padding-left: 18px;
+  border-left: 1px solid var(--surface-border);
+}
+
+.documents .document-card-cv .document-card-action {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 16px 8px 16px 0;
+}
+
+@media (max-width: 760px) {
+  .documents .document-card-cv {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .documents .document-card-cv .document-card-actions {
+    padding-left: 0;
+    border-left: 0;
+    border-top: 1px solid var(--surface-border);
+  }
+
+  .documents .document-card-cv .document-card-action {
+    padding: 15px 0;
+  }
+}
